@@ -1,36 +1,61 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+<div class="section hero" id="particles-js">
+<div class="container">
+<div class="home-content columns">
+
+  <div class="home-about  column is-7">
+    <h1 class="title"> Real-time <br/> interactive events</h1>
+    <h3 class="subtitle">Bring interaction and feedback to any live  <br/> event of your own</h3>
+  </div>
+
+  <div class="sign-up column is-5">
+    <h2 class="subtitle"> Sign up to get started</h2>
+    <form action="index.html_submit" method="get" class="box" accept-charset="utf-8">
+
+      <div class="field is-grouped">
+        <div class="control is-expanded">
+          <label class="label" for="first_name">First Name</label>
+          <input type="text" class="input" name="first_name" placeholder="John" value=""> 
+        </div>
+
+        <div class="control is-expanded">
+          <label class="label" for="last_name">Last Name</label>
+          <input type="text"class="input" name="last_name" placeholder="Doe" value=""> 
+        </div>
+      </div>
+
+
+      <div class="field ">
+        <label class="label" for="email">Email</label>
+        <div class="control is-expanded">
+          <input type="text" class="input" placeholder="valid@email.com" name="email" value=""> 
+        </div>
+      </div>
+
+      
+      <div class="field">
+        <label class="label" for="password">Password</label>
+        <div class="control">
+          <input type="password" class="input" placeholder="" name="password" value=""> 
+        </div>
+        <p class="help">Make it safe. At least 6 characters/numbers etc.</p>
+        
+      </div>
+
+
+      <div class="field">
+        <label class="label" for="password_confirmation">Confirm Password</label>
+        <div class="control">
+          <input type="password" class="input" name="password_confirmation" value=""> 
+        </div>
+      </div>
+
+      <div class="field is-grouped is-grouped-right">
+      <div class="control">
+        <input type="submit" class="button is-info is-outlined" value="Create account" />
+      </div>
+      </div>
+    </form>
+  </div>
 </div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
+</div>
 </div>

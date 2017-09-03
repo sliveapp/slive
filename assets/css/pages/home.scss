@@ -1,0 +1,42 @@
+$blue: #2892D7;
+
+.navbar {
+	padding: 1em 0;
+	background: $blue;
+
+	a { 
+		color: #fff;
+		font-size: .8em;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.home-content {
+	.home-about {
+		align-self: center;
+		z-index: 2;
+	}
+
+	.title {
+		z-index: 2;
+		font-size: 3em;
+	}
+
+	.sign-up  {
+		z-index: 2;
+		align-self: center;
+		margin-top: 2.5em;
+	}
+
+}
+
+#particles-js {
+	position: relative;
+	.particles-js-canvas-el {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+}

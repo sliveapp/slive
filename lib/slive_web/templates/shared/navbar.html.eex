@@ -1,0 +1,14 @@
+<div class="navbar">
+  <div class="container level">
+  <div class="logo level-left">
+    <%= img_tag "images/logo.png", width: "70" %>
+  </div>
+
+
+  <div class="items level-right">
+    <a href="#" class="level-item">About</a>
+    <a href="#" class="level-item">Team</a>
+    <strong><a href="/sessions/new" class="level-item">Login</a></strong>
+  </div>
+  </div>
+</div>
