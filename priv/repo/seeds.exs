@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+#
+Slive.Repo.delete_all Slive.User
+
+Slive.User.changeset(%Slive.User{}, %{first_name: "Test", last_name: "User", email: "test@test.com", password: "secret", password_confirmation: "secret"})
+|> Slive.Repo.insert!
