@@ -1,7 +1,7 @@
 <div class="navbar">
   <div class="container">
   <div class="navbar-brand">
-    <a href="#" class="navbar-item"><%= img_tag static_path(@conn, "/images/logo.png"), width: 60 %></a>
+    <a href="/" class="navbar-item"><%= img_tag static_path(@conn, "/images/logo.png"), width: 60 %></a>
 
 
     <div class="navbar-burger burger" data-target="navMenu">
@@ -26,7 +26,7 @@
       <%= if @conn.assigns.current_user do %>
         <a class="navbar-item login-link navbar-link">
           <%= "#{@conn.assigns.current_user.first_name}" %> 
-          <img src="http://placehold.it/30x30" class="image is-24x24"/>
+          <!--<img src="http://placehold.it/30x30" class="image is-24x24"/>-->
         </a>
       <% else %>
         <a href="/sessions/new" class="navbar-item login-link">Sign in</a>

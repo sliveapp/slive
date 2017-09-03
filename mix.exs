@@ -42,7 +42,8 @@ defmodule Slive.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:coherence, "~> 0.4"},
-      {:ecto, "~> 2.1", override: true}
+      {:ecto, "~> 2.1", override: true},
+
     ]
   end
 

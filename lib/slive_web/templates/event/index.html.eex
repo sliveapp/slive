@@ -1,28 +1,58 @@
-<h2>Listing Events</h2>
+<div class="hero hero-body is-dark">
+  <div class="container">
+    <nav class="breadcrumb is-small" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="is-active"><a href="#" aria-current="page">Events</a></li>
+      </ul>
+    </nav>
+    <div class="columns">
+      <div class="column is-9">
+        <h1>My Events</h2>
+      </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
+      <div class="colum is-3">
+        <span><%= link "Create new Event", to: event_path(@conn, :new), class: "button is-info" %></span>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for event <- @events do %>
-    <tr>
-      <td><%= event.title %></td>
-      <td><%= event.description %></td>
+<div class="section">
 
-      <td class="text-right">
-        <span><%= link "Show", to: event_path(@conn, :show, event), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Edit", to: event_path(@conn, :edit, event), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Delete", to: event_path(@conn, :delete, event), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
+  <div class="container"> 
+    <div class="columns">
+      <%= for event <- @events do %>
+        <div class="column is-4">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+              <%= event.title %>
+              </p>
+              <a class="card-header-icon">
+                <span class="icon">
+                  <i class="fa fa-angle-down"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <%= event.description %> 
+              </div>
+            </div>
+            <footer class="card-footer">
+              <%= link "View", to: event_path(@conn, :show, event), class: "card-footer-item" %>
+              <%= link "Edit", to: event_path(@conn, :edit, event), class: "card-footer-item" %>
+              <%= link "Delete", to: event_path(@conn, :delete, event), method: :delete, data: [confirm: "Are you sure?"], class: "card-footer-item" %>
+            </footer>
+          </div>
+        </div>
 
-<span><%= link "New Event", to: event_path(@conn, :new) %></span>
+
+      <% end %>
+
+
+
+    </div>
+  </div>
+</div>

@@ -2,21 +2,30 @@ $blue: #2892D7;
 
 .navbar {
 	padding: 1em 0;
-	background: $blue;
-
 	a { 
-		color: #fff;
+		color: #333;
 		font-size: .8em;
 		&.login-link {
 			font-weight: bold;
 		}
 	}
 }
+.home {
+	background: $blue;
+}
 
 .home-content {
+
+	h3 {
+		font-weight: 400 !important;
+	}
+
 	.home-about {
 		align-self: center;
 		z-index: 2;
+		h1, h3 {
+			color: white;
+		}
 	}
 
 	.title {

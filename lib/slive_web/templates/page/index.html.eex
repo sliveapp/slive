@@ -1,18 +1,18 @@
-<div class="section hero" id="particles-js">
+<div class="section hero home" id="particles-js">
   <div class="container">
     <div class="home-content columns">
 
       <div class="home-about  column is-7">
         <h1 class="title"> Real-time <br/> interactive events</h1>
-        <h3 class="subtitle">Bring interaction and feedback to any  <br/> event of your own</h3>
+        <h3>Bring interaction and feedback to any  <br/> event of your own</h3>
       </div>
 
       <div class="sign-up column is-5">
-        <h2 class="subtitle"> Sign up to get started</h2>
 
 
         <form action="/registrations" method="post" class="box" accept-charset="utf-8">
 
+        <h3 class="subtitle"> Sign up to get started</h3>
           <div class="field is-grouped">
             <div class="control is-expanded">
               <label class="label" for="first_name">First Name</label>
