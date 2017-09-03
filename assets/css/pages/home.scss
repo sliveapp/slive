@@ -7,8 +7,8 @@ $blue: #2892D7;
 	a { 
 		color: #fff;
 		font-size: .8em;
-		&:hover {
-			text-decoration: underline;
+		&.login-link {
+			font-weight: bold;
 		}
 	}
 }

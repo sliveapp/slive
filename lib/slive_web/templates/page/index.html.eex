@@ -1,61 +1,66 @@
 <div class="section hero" id="particles-js">
-<div class="container">
-<div class="home-content columns">
+  <div class="container">
+    <div class="home-content columns">
 
-  <div class="home-about  column is-7">
-    <h1 class="title"> Real-time <br/> interactive events</h1>
-    <h3 class="subtitle">Bring interaction and feedback to any live  <br/> event of your own</h3>
+      <div class="home-about  column is-7">
+        <h1 class="title"> Real-time <br/> interactive events</h1>
+        <h3 class="subtitle">Bring interaction and feedback to any  <br/> event of your own</h3>
+      </div>
+
+      <div class="sign-up column is-5">
+        <h2 class="subtitle"> Sign up to get started</h2>
+
+
+        <form action="/registrations" method="post" class="box" accept-charset="utf-8">
+
+          <div class="field is-grouped">
+            <div class="control is-expanded">
+              <label class="label" for="first_name">First Name</label>
+              <input type="text" class="input" name="first_name" placeholder="John" value=""> 
+            </div>
+
+            <div class="control is-expanded">
+              <label class="label" for="last_name">Last Name</label>
+              <input type="text"class="input" name="last_name" placeholder="Doe" value=""> 
+            </div>
+          </div>
+
+
+          <div class="field ">
+            <label class="label" for="email">Email</label>
+            <div class="control is-expanded">
+              <input type="text" class="input" placeholder="valid@email.com" name="email" value=""> 
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control">
+              <input type="password" class="input" placeholder="" name="password" value=""> 
+            </div>
+            <p class="help">Make it safe. At least 6 characters/numbers etc.</p>
+
+          </div>
+
+
+          <div class="field">
+            <label class="label" for="password_confirmation">Confirm Password</label>
+            <div class="control">
+              <input type="password" class="input" name="password_confirmation" value=""> 
+            </div>
+          </div>
+
+          <div class="field is-grouped is-grouped-right">
+            <div class="control">
+              <input type="submit" class="button is-info is-outlined" value="Create account" />
+            </div>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
   </div>
-
-  <div class="sign-up column is-5">
-    <h2 class="subtitle"> Sign up to get started</h2>
-    <form action="index.html_submit" method="get" class="box" accept-charset="utf-8">
-
-      <div class="field is-grouped">
-        <div class="control is-expanded">
-          <label class="label" for="first_name">First Name</label>
-          <input type="text" class="input" name="first_name" placeholder="John" value=""> 
-        </div>
-
-        <div class="control is-expanded">
-          <label class="label" for="last_name">Last Name</label>
-          <input type="text"class="input" name="last_name" placeholder="Doe" value=""> 
-        </div>
-      </div>
-
-
-      <div class="field ">
-        <label class="label" for="email">Email</label>
-        <div class="control is-expanded">
-          <input type="text" class="input" placeholder="valid@email.com" name="email" value=""> 
-        </div>
-      </div>
-
-      
-      <div class="field">
-        <label class="label" for="password">Password</label>
-        <div class="control">
-          <input type="password" class="input" placeholder="" name="password" value=""> 
-        </div>
-        <p class="help">Make it safe. At least 6 characters/numbers etc.</p>
-        
-      </div>
-
-
-      <div class="field">
-        <label class="label" for="password_confirmation">Confirm Password</label>
-        <div class="control">
-          <input type="password" class="input" name="password_confirmation" value=""> 
-        </div>
-      </div>
-
-      <div class="field is-grouped is-grouped-right">
-      <div class="control">
-        <input type="submit" class="button is-info is-outlined" value="Create account" />
-      </div>
-      </div>
-    </form>
-  </div>
-</div>
-</div>
 </div>

@@ -1,7 +1,7 @@
-defmodule Slive.Event do
+defmodule Slive.Public.Event do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Slive.Event
+  alias Slive.Public.Event
 
 
   schema "events" do

@@ -14,8 +14,14 @@
   </head>
 
   <body>
-    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <%= if get_flash(@conn, :info) do %>
+      <p class="notification is-warning" role="alert"><%= get_flash(@conn, :info) %></p>
+    <% end %>
+
+    <%= if get_flash(@conn, :error) do %>
+      <p class="notification is-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <% end %>
+
 
 
     <%= render SliveWeb.SharedView, "navbar.html",  assigns %>

@@ -40,13 +40,16 @@ defmodule SliveWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/events", EventController
+    
     coherence_routes()
   end
 
 
   # Add this block
   scope "/" do
-    pipe_through :protected
+    pipe_through :browser
+    
     coherence_routes :protected
   end
 

@@ -1,14 +1,40 @@
 <div class="navbar">
-  <div class="container level">
-  <div class="logo level-left">
-    <%= img_tag "images/logo.png", width: "70" %>
+  <div class="container">
+  <div class="navbar-brand">
+    <a href="#" class="navbar-item"><%= img_tag static_path(@conn, "/images/logo.png"), width: 60 %></a>
+
+
+    <div class="navbar-burger burger" data-target="navMenu">
+      <span> </span>
+      <span></span>
+      <span></span>
+    </div>
+   <!-- <div class="navbar-burger">
+      
+      <a href="#" class="level-item">Team</a>
+      <strong><a href="/sessions/new" class="level-item">Login</a></strong>
+   </div>-->
   </div>
 
 
-  <div class="items level-right">
-    <a href="#" class="level-item">About</a>
-    <a href="#" class="level-item">Team</a>
-    <strong><a href="/sessions/new" class="level-item">Login</a></strong>
+  <div class="navbar-menu" id="navMenu">
+    <div class="navbar-end">
+      <a href="#" class="navbar-item">About</a>
+      <a href="#" class="navbar-item">Team</a>
+
+
+      <%= if @conn.assigns.current_user do %>
+        <a class="navbar-item login-link navbar-link">
+          <%= "#{@conn.assigns.current_user.first_name}" %> 
+          <img src="http://placehold.it/30x30" class="image is-24x24"/>
+        </a>
+      <% else %>
+        <a href="/sessions/new" class="navbar-item login-link">Sign in</a>
+      <% end %>
+    </div>
   </div>
-  </div>
+
+
+
+</div>
 </div>
