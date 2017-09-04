@@ -32,7 +32,7 @@ defmodule SliveWeb.EventController do
 
   def show(conn, %{"id" => id}) do
     event = Public.get_event!(id)
-    render(conn, "show.html", event: event)
+    render(conn, "show.html", event: event, layout: { SliveWeb.LayoutView, "event.html" } )
   end
 
   def edit(conn, %{"id" => id}) do

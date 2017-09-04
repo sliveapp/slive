@@ -1,18 +1,146 @@
-<h2>Show Event</h2>
+<div class="columns is-gapless">
+  <div class="column is-9">
+    <div class="image is-2by1">
+      <%= img_tag static_path(@conn, "/images/slide_sample.png") %>
+    </div>
 
-<ul>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @event.title %>
-  </li>
+    <div class="section">
 
-  <li>
-    <strong>Description:</strong>
-    <%= @event.description %>
-  </li>
+      <div class="container">
+        <h1> <%= @event.title %> </h1>
+        <p> <%= @event.description %> </p>
+      </div>
 
-</ul>
+      <span><%= link "Edit", to: event_path(@conn, :edit, @event) %></span>
+      <span><%= link "Back", to: event_path(@conn, :index) %></span>
+    </div>
 
-<span><%= link "Edit", to: event_path(@conn, :edit, @event) %></span>
-<span><%= link "Back", to: event_path(@conn, :index) %></span>
+
+    <div class="section">
+      <section class="chat-box">
+        <div class="content event-messages is-light">
+          <p><small>18:30</small> &nbsp; <strong>Harsh said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:33</small> &nbsp; <strong>Yash said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:34</small> &nbsp; <strong>Luiz said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:35</small> &nbsp; <strong>Carlos said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:36</small> &nbsp; <strong>Jessica said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:38</small> &nbsp; <strong>Mariah said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:40</small> &nbsp; <strong>Hillary said</strong>: What's up!! I learned how to code using Elixir! </p>
+          <p><small>18:50</small> &nbsp; <strong>Obama said</strong>: What's up!! I learned how to code using Elixir! </p>
+        </div>
+
+
+        <form class="send-message">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input type="text" name="question" placeholder="Let's chat? Type anything" class="input"/>
+            </div>
+
+            <div class="control">
+              <a class="button is-primary">
+                Send message 
+              </a>
+            </div>
+          </div>
+
+        </form>
+
+        </form>
+      </section>
+    </div>
+
+  </div>
+
+
+  <div class="column is-3 grouped-actions">
+
+    <section class="form-actions ">
+      <h3>Participants (23)</h3>
+
+      <div class="list-item media">
+        <div class="image is-48x48 media-left">
+          <img src="https://api.adorable.io/avatars/86/ei@luiz.png"/>
+        </div>
+        <p class="media-content">
+        Luiz Fonseca
+        <br/>
+        <span class=" help is-small">posted 32 messages </span>
+        </p>
+      </div>
+
+
+
+      <div class="list-item media">
+        <div class="image is-48x48 media-left">
+          <img src="https://api.adorable.io/avatars/86/ei@ajdkajsd.png"/>
+        </div>
+        <p class="media-content">
+        Carlos Johnson
+        <br/>
+        <span class=" help is-small">posted 12 messages </span>
+        </p>
+      </div>
+
+
+
+
+
+      <div class="list-item media">
+        <div class="image is-48x48 media-left">
+          <img src="https://api.adorable.io/avatars/86/ei@123133333.png"/>
+        </div>
+        <p class="media-content">
+        Harsh Banthya 
+        <br/>
+        <span class=" help is-small">posted 88 messages </span>
+        </p>
+      </div>
+
+
+
+
+
+      <div class="list-item media">
+        <div class="image is-48x48 media-left">
+          <img src="https://api.adorable.io/avatars/86/i@ddz.png"/>
+        </div>
+        <p class="media-content">
+        Yash Jouffroi 
+        <br/>
+        <span class=" help is-small">posted 32 messages </span>
+        </p>
+      </div>
+    </section>
+
+    <section class="is-spaced form-actions">
+      <h3> Ask the presenter </h3>
+      <span> Do you have any questions for the presenter? </span>
+      <form class="">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input type="text" value="" name="question" placeholder="Ask me anything..." class="input"/>
+          </div>
+          <div class="control">
+              <a class="button is-dark">
+                Ask 
+              </a>
+
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
