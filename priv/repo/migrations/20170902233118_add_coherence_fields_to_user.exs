@@ -1,4 +1,4 @@
-defmodule Slive.Repo.Migrations.AddCoherenceToUser do
+defmodule Slive.Repo.Migrations.AddCoherenceFieldsToUser do
   use Ecto.Migration
   def change do
     alter table(:users) do
