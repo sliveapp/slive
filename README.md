@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sliveapp/ItSlive.svg?branch=master)](https://travis-ci.org/sliveapp/ItSlive)
+
 # Slive
 
 To start your Phoenix server:
