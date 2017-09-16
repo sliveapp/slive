@@ -1,0 +1,44 @@
+# Use Official Elixir runtime from Docker
+# Found at https://hub.docker.com/_/elixir/
+
+# Get latest Ubuntu version
+FROM elixir:1.5.1 
+
+RUN mix local.hex --force
+
+# Install sass ( for some reason we need this ruby )
+RUN apt-get update
+RUN apt-get install -y ruby-full rubygems-integration
+RUN gem install sass
+RUN apt-get install inotify-tools -y
+
+
+# Install Phoenix
+RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
+
+# Install node
+RUN curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN apt-get install nodejs
+
+
+# create app folder
+RUN mkdir /app
+COPY . /app
+WORKDIR /app
+
+# install dependencies
+RUN mix deps.get
+RUN mix local.rebar --force
+
+# install node dependencies
+WORKDIR /app/assets
+RUN npm install
+RUN node node_modules/brunch/bin/brunch build
+
+
+WORKDIR /app
+
+
+# run phoenix
+CMD mix phx.server

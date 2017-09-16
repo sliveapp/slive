@@ -51,7 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :slive, Slive.Repo,
   adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
   password: "postgres",
   database: "slive_dev",
-  hostname: "localhost",
+  hostname: "postgres",
   pool_size: 10
