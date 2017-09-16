@@ -2,10 +2,10 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-			joinTo: {
-				'js/vendor.js': /^node_modules/,
-				'js/app.js': /^js/
-			}
+      joinTo: {
+        'js/vendor.js': /^node_modules/,
+        'js/app.js': /^js/
+      }
 
 
       // To use a separate vendor.js bundle, specify two files path
@@ -24,11 +24,11 @@ exports.config = {
       // }
     },
     stylesheets: {
-			joinTo: {
-				'css/vendor.css': /^node_modules/,
-				'css/app.css': /^css/
-			}
-			
+      joinTo: {
+        'css/vendor.css': /^node_modules/,
+        'css/app.css': /^css/
+      }
+
     },
     templates: {
       joinTo: "js/app.js"
@@ -57,9 +57,9 @@ exports.config = {
       ignore: [/vendor/]
     },
 
-		sass: {
-			mode: 'ruby'
-		}
+    sass: {
+      mode: 'ruby'
+    }
   },
 
   modules: {
@@ -69,9 +69,8 @@ exports.config = {
   },
 
   npm: {
-    enabled: true,
-		styles: {
-			bulma: ["bulma"]
-		}
+    styles: {
+      bulma: ["css/bulma.css"]
+    }
   }
 };

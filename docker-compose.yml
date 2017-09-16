@@ -1,0 +1,25 @@
+version: '3.2'
+services: 
+  phoenix: 
+    build: 
+      context: .
+      dockerfile: Dockerfile.development
+    volumes: 
+      - .:/app
+    links: 
+      - postgres
+    ports:
+      - "4000:4000"
+  postgres:
+    image: postgres:latest
+    container_name: slivepostgres
+    ports:
+      - "5431:5432" 
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment: 
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres 
+volumes:
+  db_data:
+
